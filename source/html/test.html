@@ -1,0 +1,237 @@
+{% extends 'layouts/default.html' %} {% block content %}
+
+<div id="root">
+    <div class="container">
+        <div class="column-start-1 column-end--1">
+            <div class="homepage-banner-container">
+                <div class="top-bar-wrapper">
+                    <div class="top-bar-wrapper-content">
+                        <a class="logo" href="/"
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 173 46"
+                                width="173"
+                                height="46"
+                                class="logo-image"
+                            >
+                                <path
+                                    d="M147.9 46h12.6V10.8H173V0h-37.6v10.8h12.5V46zm-41.5-24.9V9.9h7.2c4.6 0 6.9 1.9 6.9 5.6 0 3.7-2.3 5.6-6.9 5.6h-7.2zM93.9 46h12.6V31h7.5c11.3 0 18.8-4.9 18.8-15.5S125.2 0 114 0H93.9v46zm-43.3 0h34.3V35.7H63.2v-7.8h21.5V18H63.2v-7.7h21.7V0H50.6v46zm-38-10.7V10.7h4c8.8 0 14.3 3.2 14.3 12.3 0 9.1-5.4 12.3-14.3 12.3h-4zM0 46h16.5c15.6 0 26.9-6.2 26.9-23C43.3 6.2 32 0 16.5 0H0v46z"
+                                ></path>
+                            </svg>
+                        </a>
+                        <div class="menu-bar">
+                            {% include 'menu.html' %}
+                        </div>
+                    </div>
+                </div>
+                <div class="work-text-wrapper">
+                    <h1 class="work-title-text">WORK</h1>
+                </div>
+                <div class="button-wrapper">
+                    <button class="btn-case">View Case</button>
+                </div>
+            </div>
+        </div>
+        <div class="column-start-1 column-end--1">
+            <div class="content-container">
+                <div class="column-start-1 column-end--1">
+                    <div class="mt-50"></div>
+                    <article class="case-item-wrapper">
+
+                        {% for case in site.cases %}
+                        <div>
+                            <img
+                                class="case-image"
+                                src="{{ case.image }}"
+                                alt="/assets/images/Story-585x585-c.jpg"
+                            />
+                            <div class="client-name">{{case.client_name}}</div>
+                            <div class="title">
+                              {{case.case_introduction}}
+                            </div>
+                            <div class="unstyled-link" href={{case.url}}>
+                                <a
+                                    class="case-link"
+                                    href="/work/bol.com"
+                                    tabindex="0"
+                                    ><i class="fa fa-caret-right"></i>View
+                                    Case</a
+                                >
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </article>
+                  
+            <div class="column-start-1 column-end--1">
+                <div class="mt-50"></div>
+                <div class="client-wrapper">
+                    <div class="client-header">
+                        <h1 class="title">Clients</h1>
+                        <p class="client-comment">
+                            We value a great working relationship with our
+                            clients above all else. It's why they often come to
+                            our parties . It's also why we're able to challenge
+                            and inspire them to reach for the stars.
+                        </p>
+                    </div>
+                    <div class="logo-grid">
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/Ziggo_logo_zwart-320x161.png"
+                                alt="Ziggo"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/ABN_logo_zwart-320x161.png"
+                                alt="ABN"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/Adidas_logo_zwart-320x161.png"
+                                alt="Adidas"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/Axe_logo_zwart-320x161.png"
+                                alt="Axe"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/DeltaLloyd_logo_zwart-320x161.png"
+                                alt="Delta Lloyd"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="assets/images/logos/Douglas_logo_zwart-320x161.png"
+                                alt="Douglas"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="assets/images/logos/Nivea_logo_zwart-320x161.png"
+                                alt="Nivea"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="assets/images/logos/NN_logo_zwart-320x161.png"
+                                alt="NN"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/Oxxio_logo_zwart-320x161.png"
+                                alt="Oxxio"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/Panasonic_logo_zwart-320x161.png"
+                                alt="Panasonic"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/Philips_logo_zwart-320x161.png"
+                                alt="Philips"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/radisson-320x161.png"
+                                alt="Radisson"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/Transavia_logo_zwart-320x161.png"
+                                alt="Transavia"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="/assets/images/logos/Triumph_logo_zwart-320x161.png"
+                                alt="Triumph"
+                            />
+                        </div>
+                        <div class="logo-wrapper">
+                            <img
+                                class="logo-image"
+                                src="assets/images/logos/United_logo_zwart-320x161.png"
+                                alt="United"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column-start-1 column-end--1">
+                <div class="mt-50"></div>
+                <div class="contact-form-wrapper">
+                    <h1 class="contact-title">
+                        Question? We are here to help!
+                    </h1>
+                    <div class="form-wrapper">
+                        <form>
+                            <div>
+                                <label for="name">Name</label>
+                                <div>
+                                    <input
+                                        id="name"
+                                        type="text"
+                                        name="name"
+                                        value=""
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <div>
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        name="email"
+                                        value=""
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <label for="message">Message</label>
+                                <div>
+                                    <input
+                                        id="message"
+                                        type="text"
+                                        name="message"
+                                        value=""
+                                    />
+                                </div>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}

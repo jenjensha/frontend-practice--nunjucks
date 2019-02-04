@@ -1,0 +1,156 @@
+{
+    "language": "nl",
+    "direction": "ltr",
+    "url": "http:/www.tamtam.nl",
+    "gtm": "GTM-XXXX",
+    "title": "TITLE HERE",
+    "description": "DESCRIPTION HERE",
+    "image": "http:/www.tamtam.nl/wp-content/uploads/2015/11/12292876_1059929187373281_433234993_n.jpg",
+    "preconnect" : [
+        {
+            "url" : "https:/googletagmanager.com/"
+        },
+        {
+            "url" : "https:/google-analytics.com/"
+        }
+    ],
+    "preload" : [
+        {
+            "url" : "/assets/js/main-es.js",
+            "as" : "script"
+        },
+        {
+            "url" : "/assets/css/main.css",
+            "as" : "style"
+        }
+    ],
+    "cases": [
+        {
+          "client_name": "bol.com",
+          "case_introduction": "A summer island in the Netherlands",
+          "image": "/assets/images/Story-585x585-c.jpg",
+          "image_wide": "/assets/images/Story-1200x675-c.jpg",
+          "url": "/work/bol.com"
+        },
+        {
+          "client_name": "ampleon",
+          "case_introduction": "Not some average banking website",
+          "image": "/assets/images/Ampleon-Featured-image-2-585x585-c.jpg",
+          "image_wide": "/assets/images/Ampleon-Featured-image-2-1200x675-c.jpg",
+          "url": "/work/ampleon"
+        },
+        {
+          "client_name": "new10",
+          "case_introduction": "Beautiful design meets innovative technology",
+          "image": "/assets/images/Header-New10-585x585-c.jpg",
+          "image_wide": "/assets/images/Header-New10-1200x675-c.jpg",
+          "url": "/work/new10"
+        },
+        {
+          "client_name": "Allianz",
+          "case_introduction": "A 100 years of Mondriaan & de Stijl",
+          "image": "/assets/images/Allianz-half-width-2-1-585x585-c.png",
+          "image_wide": "/assets/images/Allianz-half-width-2-1-1200x675-c.png",
+          "url": "/work/allianz"
+        },
+        {
+          "client_name": "microsoft",
+          "case_introduction": "Tapping into Ireland's unique gaming culture and bringing a fresh flavour to their Xbox socialmedia channels",
+          "image": "/assets/images/Windows-header-585x585-c.jpg",
+          "image_wide": "/assets/images/Windows-header-1200x675-c.jpg",
+          "url": "/work/microsoft"
+        },
+        {
+          "client_name": "Windows",
+          "case_introduction": "Integrating existing content into O'Neill's new e-commerce platform",
+          "image": "/assets/images/Windows-header-585x585-c.jpg",
+          "image_wide": "/assets/images/Windows-header-1200x675-c.jpg",
+          "url": "/work/windows"
+        },
+        {
+          "client_name": "florensis",
+          "case_introduction": "Rethinking the entire online ecosystem",
+          "image": "/assets/images/GE-header-2-585x585-c.jpg",
+          "image_wide": "/assets/images/GE-header-2-1200x675-c.jpg",
+          "url": "/work/florensis"
+        },
+        {
+          "client_name": "be lighting",
+          "case_introduction": "Delivering clarity on a global scale",
+          "image": "/assets/images/De-homepage-header-3-585x585-c.jpg",
+          "image_wide": "/assets/images/De-homepage-header-3-1200x675-c.jpg",
+          "url": "/work/be-lighting"
+        },
+        {
+          "client_name": "tui",
+          "case_introduction": "Swipe to find your next holiday destination",
+          "image": "/assets/images/header-4-585x585-c.jpg",
+          "image_wide": "/assets/images/header-4-1200x675-c.jpg",
+          "url": "/work/tui"
+        },
+        {
+          "client_name": "butlins",
+          "case_introduction": "Enhancing customer experience for personalised holiday planning using real time data",
+          "image": "/assets/images/Butlins-featured-optie-2-585x585-c.jpg",
+          "image_wide": "/assets/images/Butlins-featured-optie-2-1200x675-c.jpg",
+          "url": "/work/butlins"
+        },
+        {
+          "client_name": "vacanseselect",
+          "case_introduction": "Predicting booking behavior for holidays with smart data, voice search and machine learning",
+          "image": "/assets/images/Vacanselect-2-585x585-c.jpg",
+          "image_wide": "/assets/images/Vacanselect-2-1200x675-c.jpg",
+          "url": "/work/vacanselect"
+        },
+        {
+          "client_name": "florensis",
+          "case_introduction": "Rethinking the entire online ecosystem",
+          "image": "/assets/images/Header-New10-585x585-c.jpg",
+          "image_wide": "/assets/images/Header-New10-1200x675-c.jpg",
+          "url": "/work/florensis"
+        },
+        {
+          "client_name": "chocomel",
+          "case_introduction": "A campaign for the limited edition letter packs",
+          "image": "/assets/images/Half-width-v2-585x585-c.jpg",
+          "image_wide": "/assets/images/Half-width-v2-1200x675-c.jpg",
+          "url": "/work/chocomel"
+        },
+        {
+          "client_name": "jbl",
+          "case_introduction": "Live like a champion with Jerome Boateng",
+          "image": "/assets/images/Nemo-case-header-585x585-c.png",
+          "image_wide": "/assets/images/Nemo-case-header-1200x675-c.png",
+          "url": "/work/jbl"
+        },
+        {
+          "client_name": "zalando",
+          "case_introduction": "Innovative SEO and content strategy for Zalando",
+          "image": "/assets/images/Rituals-1-585x585-c.jpg",
+          "image_wide": "/assets/images/Rituals-1-1200x675-c.jpg",
+          "url": "/work/zalando"
+        },
+        {
+          "client_name": "koninklijke bibliotheek",
+          "case_introduction": "The search for the most influential book ever",
+          "image": "/assets/images/Uganda-CTA-033-585x585-c.jpg",
+          "image_wide": "/assets/images/Uganda-CTA-033-1200x675-c.jpg",
+          "url": "/work/koninklijke-bibliotheek"
+        },
+        {
+          "client_name": "liberty global",
+          "case_introduction": "Delivering complex commerce solutions",
+          "image": "/assets/images/Windows-header-585x585-c.jpg",
+          "image_wide": "/assets/images/Windows-header-1200x675-c.jpg",
+          "url": "/work/liberty"
+        },
+        {
+          "client_name": "arla",
+          "case_introduction": "Swipe to find your next holiday destination",
+          "image": "/assets/images/Arla-featured-585x585-c.jpg",
+          "image_wide": "/assets/images/Arla-featured-1200x675-c.jpg",
+          "url": "/work/arla"
+        }
+      ]
+       
+}
