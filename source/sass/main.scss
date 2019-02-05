@@ -4,33 +4,33 @@
   #MAIN
 \*------------------------------------*/
 
-@import '01_tools/tools.conversion';
+@import "01_tools/tools.conversion";
 
-@import '00_settings/all';
-@import '01_tools/all';
+@import "00_settings/all";
+@import "01_tools/all";
 
 //  Vendor libs
 //      - styles from other sources (npm)
 //[INSERT VENDOR LIBS]
 
-@import '10_generic/generic.font-face';
-@import '10_generic/generic.normalize';
-@import '10_generic/generic.html';
+@import "10_generic/generic.font-face";
+@import "10_generic/generic.normalize";
+@import "10_generic/generic.html";
 
-@import '20_elements/all';
+@import "20_elements/all";
 
-@import '30_objects/objects.grid';
-@import '30_objects/objects.background-image';
+@import "30_objects/objects.grid";
+@import "30_objects/objects.background-image";
 
 /* components:scss */
-@import '../../source/components/button/stylesheet/_components.button';
-@import '../../source/components/footer/stylesheet/_components.footer';
-@import '../../source/components/header/stylesheet/_components.header';
+@import "../../source/components/button/stylesheet/_components.button";
+@import "../../source/components/footer/stylesheet/_components.footer";
+@import "../../source/components/header/stylesheet/_components.header";
 /* endinject */
 
-@import '50_scopes/scopes.rich-text';
+@import "50_scopes/scopes.rich-text";
 
-@import '70_utilities/all';
+@import "70_utilities/all";
 
 .client-name {
     grid-column: 1/2;
@@ -46,7 +46,7 @@
 
 .title {
     grid-column: 1/2;
-    font-family: 'Teko', sans-serif;
+    font-family: "Teko", sans-serif;
     font-size: 30px;
     font-weight: normal;
     font-style: normal;
@@ -241,7 +241,7 @@
     position: relative;
     height: 320px;
     width: 100%;
-    background: url('/assets/images//Vacanselect-2-1440x810-c.jpg') no-repeat
+    background: url("/assets/images//Vacanselect-2-1440x810-c.jpg") no-repeat
         center center fixed;
     background-size: cover;
 
@@ -352,7 +352,7 @@
 }
 
 .navbar-wrapper {
-    grid-column: 11/12;
+    grid-column: 10/12;
 }
 
 .button-wrapper {
@@ -461,43 +461,101 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
-
-    
 }
 .close-button {
-  color: white;
+    color: white;
+}
+
+.menu {
+    // background-color: #0e0e0e;
+    position: relative;
+    &:before {
+        content: "";
+        height: 2px;
+        width: 20px;
+        position: absolute;
+        top: 60%;
+        left: 50px;
+        background-color: red;
+    }
+
+    &:after {
+        content: "";
+        height: 2px;
+        width: 20px;
+        position: absolute;
+        top: 20%;
+        left: 50px;
+        background-color: red;
+    }
+}
+
+.menu-button {
+    margin-right: 28px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .menu-bar {
-  list-style-type: none;
+    list-style-type: none;
+    position: relative;
 }
 .menu-list {
-  text-align: right;  
+    text-align: right;
 }
-.menu-link { // a
-  text-decoration: none;
-  color: white;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 50px;
+.menu-link {
+    // a
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 50px;
+    // &:last-child{
+    //     color: yellow;
+    // }
+    &:after {
+        content: "";
+        display: block;
+        border-bottom: 1px solid #fff;
+        width: 750px;
+        box-sizing: border-box;
+        position: absolute;
+        right: 10px;
+        opacity: 0.5;
+    }
 
-  &:before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-image: url('/assets/images/arrow-white.svg');
-    background-size: cover;
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-  }
+    &:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-image: url("/assets/images/arrow-white.svg");
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
 
-  &:hover {
-    color: yellow;
-  }
+    &:hover {
+        color: yellow;
+    }
 
-  &:hover:before {
-    display: inline-block;
-  }
+    &:hover:before {
+        display: inline-block;
+    }
+}
+
+.menu-link-last {
+    &:after {
+        content: "";
+        display: none;
+        border-bottom: 1px solid #fff;
+        width: 750px;
+        box-sizing: border-box;
+        position: absolute;
+        right: 10px;
+        opacity: 0.5;
+    }
 }
 
 .ReactModal__Overlay--after-open {
