@@ -1,0 +1,25 @@
+<article class="case-item-wrapper">
+
+    {% for case in site.cases %}
+    <div>
+        <img
+            class="case-image"
+            src="{{ case.image }}"
+            alt="/assets/images/Story-585x585-c.jpg"
+        />
+        <div class="client-name">{{case.client_name}}</div>
+        <div class="title">
+          {{case.case_introduction}}
+        </div>
+        <div class="unstyled-link" href={{case.url}}>
+            <a
+                class="case-link"
+                href="/work/bol.com"
+                tabindex="0"
+                ><i class="fa fa-caret-right"></i>View
+                Case</a
+            >
+        </div>
+    </div>
+    {% endfor %}
+</article>

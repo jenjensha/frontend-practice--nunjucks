@@ -1,93 +1,119 @@
 <!DOCTYPE html>
 <html lang="{{ site.language }}" dir="{{ site.direction }}">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+        <meta name="description" content="{{ site.description }}" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+        />
 
-<head>
+        <meta property="og:url" content="{{ site.url }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{ site.title }}" />
+        <meta property="og:description" content="{{ site.description }}" />
+        <meta property="og:image" content="{{ site.image }}" />
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>{{ site.title }}</title>
 
-    <meta name="description" content="{{ site.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <!-- Style sheets -->
+        {% if project.debug %}
+        <link rel="stylesheet" href="/assets/css/dev.css" />
+        {% endif %}
+        <link lazyload rel="stylesheet" href="/assets/css/main.css" />
 
+        {% include "generic/preloads.html" %} {% include
+        "generic/environment.html" %}
 
-    <meta property="og:url"           content="{{ site.url }}" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{ site.title }}" />
-    <meta property="og:description"   content="{{ site.description }}" />
-    <meta property="og:image"         content="{{ site.image }}" />
+        <!-- Favicons -->
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="/assets/images/favicons/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/assets/images/favicons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/assets/images/favicons/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/assets/images/favicons/manifest.json" />
+        <link
+            rel="mask-icon"
+            href="/assets/images/favicons/safari-pinned-tab.svg"
+        />
+        <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico" />
+        <meta
+            name="msapplication-config"
+            content="/assets/images/favicons/browserconfig.xml"
+        />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
 
+    <body>
+        {% if (project.showGrid == true and project.debug == true) %} {% from
+        '_dev/tools/grid-overlay.html' import gridOverlay %}
+        {{ gridOverlay({ columns: 12 }) }}
 
-    <title>{{ site.title }}</title>
+        {% endif %} {% if site.gtm and site.gtm != 'GTM-XXXX' %} {% include
+        "generic/gtm.html" %} {% endif %}
 
-    <!-- Style sheets -->
-    {% if project.debug %}<link rel="stylesheet" href="/assets/css/dev.css"/>{% endif %}
-    <link lazyload rel="stylesheet" href="/assets/css/main.css"/>
+        <a class="u-sr-only" href="#content" title="Skip to main content"
+            >Skip to main content</a
+        >
 
-    {% include "generic/preloads.html" %}
+        {% include "header.html" %}
 
-    {% include "generic/environment.html" %}
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/assets/images/favicons/manifest.json">
-    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg">
-    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
-    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-</head>
-
-
-<body>
-
-    {% if (project.showGrid == true and project.debug == true) %}
-
-      {% from '_dev/tools/grid-overlay.html' import gridOverlay %}
-      {{ gridOverlay( { columns: 12 } ) }}
-
-    {% endif %}
-
-    {% if site.gtm and site.gtm != 'GTM-XXXX' %}
-
-        {% include "generic/gtm.html" %}
-
-    {% endif %}
-
-
-    <a class="u-sr-only" href="#content" title="Skip to main content">Skip to main content</a>
-
-    {% include "header.html" %}
-
-    <main id="content" role="main">
-
-        {% block content %}
+        <main id="content" role="main">
+            {% block content %}
 
             <!-- content will be injected in this block -->
 
-        {% endblock %}
+            {% endblock %}
+        </main>
 
-    </main>
+        {% include "footer.html" %}
 
+        <script>
+            // Nomodule fix for Safari 10
+            !(function() {
+                var e = document,
+                    t = e.createElement("script");
+                if (!("noModule" in t) && "onbeforeload" in t) {
+                    var n = !1;
+                    e.addEventListener(
+                        "beforeload",
+                        function(e) {
+                            if (e.target === t) n = !0;
+                            else if (!e.target.hasAttribute("nomodule") || !n)
+                                return;
+                            e.preventDefault();
+                        },
+                        !0
+                    ),
+                        (t.type = "module"),
+                        (t.src = "."),
+                        e.head.appendChild(t),
+                        t.remove();
+                }
+            })();
+        </script>
 
-
-    {% include "footer.html" %}
-
-    <script>
-        // Nomodule fix for Safari 10
-        !function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();
-    </script>
-
-    {% if project.debug %}
+        {% if project.debug %}
         <script async src="/assets/js/main.js"></script>
-    {% else %}
+        {% else %}
         <script type="module" async src="/assets/js/main-es.js"></script>
         <script nomodule async src="/assets/js/main.js"></script>
-    {% endif %}
+        {% endif %}
+    </body>
 
-</body>
-
-<!-- name: {{ project.name }}, version: {{ project.version }} -->
+    <!-- name: {{ project.name }}, version: {{ project.version }} -->
 </html>
